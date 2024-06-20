@@ -1,0 +1,25 @@
+{
+    "app-id": "com.example.MyApp",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "21.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "myapp",
+    "modules": [
+        {
+            "name": "myapp",
+            "buildsystem": "simple",
+            "build-commands": [
+                "go mod init github.com/shinunandakumar/flatpak-test",
+                "go build -o myapp main.go"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/shinunandakumar/flatpak-test.git",
+                    "branch": "main"
+                }
+            ]
+        }
+    ]
+}
+
